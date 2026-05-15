@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Link2, Globe, FileText } from "lucide-react";
+import { ArrowDown, Mail, Link2, Globe } from "lucide-react";
 import { siteConfig } from "@/data/content";
 
 const TAGLINES = [
@@ -200,12 +200,7 @@ export function Hero() {
           transition={{ delay: 1.9, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <MagneticButton href={siteConfig.links.resume} download primary>
-            <FileText size={16} />
-            Resume
-          </MagneticButton>
-
-          <MagneticButton href={siteConfig.links.github}>
+          <MagneticButton href={siteConfig.links.github} primary>
             <Link2 size={16} />
             GitHub
           </MagneticButton>
