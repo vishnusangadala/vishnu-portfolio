@@ -164,7 +164,7 @@ export function Contact() {
             <div className="flex-1">
               <div className="text-xs font-mono mb-0.5" style={{ color: "var(--text-subtle)" }}>LeetCode</div>
               <div className="text-sm font-medium" style={{ color: "var(--text-muted)" }}>
-                513+ problems · Top 79%
+                500+ problems solved
               </div>
             </div>
             <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "var(--text-subtle)" }} />
