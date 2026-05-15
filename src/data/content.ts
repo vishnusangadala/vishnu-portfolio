@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "(934) 263-2403",
   location: "Stony Brook, NY",
   links: {
-    linkedin: "#linkedin",
+    linkedin: "https://www.linkedin.com/in/vishnu-sangadala/",
     github: "https://github.com/vishnusangadala",
     leetcode: "#leetcode",
     resume: "/resume.pdf",
