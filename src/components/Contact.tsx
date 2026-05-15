@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { siteConfig } from "@/data/content";
 import { SectionLabel } from "./About";
-import { Mail, Link2, Globe, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Link2, Globe, MapPin, ExternalLink, Code2 } from "lucide-react";
 
 export function Contact() {
   const ref = useRef(null);
@@ -135,6 +135,36 @@ export function Contact() {
               <div className="text-xs font-mono mb-0.5" style={{ color: "var(--text-subtle)" }}>GitHub</div>
               <div className="text-sm font-medium" style={{ color: "var(--text-muted)" }}>
                 @vishnusangadala
+              </div>
+            </div>
+            <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "var(--text-subtle)" }} />
+          </a>
+
+          <a
+            href={siteConfig.links.leetcode}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-5 rounded-xl border text-left transition-all duration-300 group"
+            style={{ borderColor: "var(--border)", background: "var(--bg-card)" }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.borderColor = "oklch(80% 0.22 140 / 50%)";
+              (e.currentTarget as HTMLElement).style.background = "oklch(80% 0.22 140 / 5%)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
+              (e.currentTarget as HTMLElement).style.background = "var(--bg-card)";
+            }}
+          >
+            <div
+              className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+              style={{ background: "oklch(80% 0.22 140 / 12%)" }}
+            >
+              <Code2 size={18} style={{ color: "var(--lime)" }} />
+            </div>
+            <div className="flex-1">
+              <div className="text-xs font-mono mb-0.5" style={{ color: "var(--text-subtle)" }}>LeetCode</div>
+              <div className="text-sm font-medium" style={{ color: "var(--text-muted)" }}>
+                513+ problems · Top 79%
               </div>
             </div>
             <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "var(--text-subtle)" }} />

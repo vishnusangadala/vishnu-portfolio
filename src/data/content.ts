@@ -11,7 +11,7 @@ export const siteConfig = {
   links: {
     linkedin: "https://www.linkedin.com/in/vishnu-sangadala/",
     github: "https://github.com/vishnusangadala",
-    leetcode: "#leetcode",
+    leetcode: "https://leetcode.com/u/vishnusangadala/",
     resume: "/resume.pdf",
   },
   ogImage: "/og-image.png",
@@ -204,12 +204,12 @@ export const education = [
     institution: "Sathyabama Institute of Science and Technology",
     period: "Aug 2018 – May 2022",
     gpa: "3.65",
-    highlights: ["Vice President, Coding Club", "500+ LeetCode problems solved"],
+    highlights: ["Vice President, Coding Club", "513+ LeetCode problems solved"],
   },
 ];
 
 export const achievements = [
-  { label: "LeetCode Problems Solved", value: "500+", icon: "Trophy" },
+  { label: "LeetCode Problems Solved", value: "513+", icon: "Trophy" },
   { label: "Daily B2B Transactions at Infor", value: "1,000+", icon: "Zap" },
   { label: "Release Cycle Acceleration", value: "60%", icon: "Rocket" },
   { label: "API Latency Reduction", value: "30%", icon: "TrendingDown" },
