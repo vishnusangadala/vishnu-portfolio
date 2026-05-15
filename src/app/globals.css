@@ -1,26 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: oklch(8% 0.02 270);
+  --bg-secondary: oklch(11% 0.025 270);
+  --bg-card: oklch(13% 0.03 270);
+  --border: oklch(22% 0.04 270);
+  --text: oklch(95% 0.01 270);
+  --text-muted: oklch(60% 0.02 270);
+  --text-subtle: oklch(40% 0.02 270);
+
+  --indigo: oklch(60% 0.18 265);
+  --violet: oklch(58% 0.22 295);
+  --magenta: oklch(60% 0.24 320);
+  --cyan: oklch(75% 0.2 200);
+  --lime: oklch(80% 0.22 140);
+
+  --gradient-start: oklch(55% 0.2 265);
+  --gradient-mid: oklch(55% 0.24 295);
+  --gradient-end: oklch(58% 0.26 320);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.light {
+  --bg: oklch(98% 0.005 270);
+  --bg-secondary: oklch(95% 0.01 270);
+  --bg-card: oklch(100% 0 0);
+  --border: oklch(88% 0.02 270);
+  --text: oklch(10% 0.02 270);
+  --text-muted: oklch(45% 0.03 270);
+  --text-subtle: oklch(65% 0.02 270);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: oklch(58% 0.22 295 / 30%);
+  color: var(--text);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-subtle); }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end)) border-box;
+}
+
+.glow {
+  box-shadow: 0 0 40px oklch(58% 0.22 295 / 15%);
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
